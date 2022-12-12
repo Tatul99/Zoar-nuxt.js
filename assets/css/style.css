@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Montserrat Arm";
+    src: url("../fonter.am_montserrat-armenian/Montserratarm-Regular.otf")
+      format("opentype");
+  }
+  
+body{
+  /* overflow-x: hidden; */
+    font-family: Montserrat arm;
+    color: #AFAEB1;
+   
+}
+html{
+  scroll-behavior: smooth;
+}
+.first-carousel .swiper-button-prev:after{
+  display: none;
+}
+.first-carousel .swiper-button-next:after{
+  display: none;
+}
+.first-carousel .swiper-button-prev{
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/slider-chenge-icon.svg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(180deg);
+  
+}
+.first-carousel .swiper-button-prev::before{
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  border-radius: 50%;
+  background:rgba(255, 255, 255, 0.3) ;
+  }
+.first-carousel .swiper-button-next::before{
+content: '';
+width: 40px;
+height: 40px;
+position: absolute;
+top: -20%;
+right: -10%;
+border-radius: 50%;
+background:rgba(255, 255, 255, 0.3) ;
+}
+.first-carousel .swiper-button-next{
+  width: 30px;
+  height: 30px;
+  /* position: relative; */
+  background-image: url('../images/slider-chenge-icon.svg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+ 
+}

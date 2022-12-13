@@ -1,17 +1,17 @@
 <template>
 
     <div id="buildingAmenities" class="amenites-main flex flex-col items-center pt-[100px]">
-        <div class="title uppercase mb-[80px] text-blue text-[24px] text-center md:text-[40px] leading-[49px] font-bold">Շենքի հարմարությունները</div>
+        <div class="title uppercase mb-[80px] text-blue text-[24px] text-center md:text-[40px] leading-[49px] font-bold">{{t('BuildingAmenities.Building-amenities')}}</div>
         <div class="amenities-contain w-[100%] flex flex-col md:flex-row md:justify-between md:items-center">
             <div class="pl-[20px] md:pl-[80px]  lg:pl-[200px]  md:w-[60%] lg:w-[50%] flex flex-col justify-center">
                 <div v-for="item in amenities" :key="item.id"
                 class="text-blue text-[12px] w-full  md:text-base uppercase mb-[15px] font-normal"
                 >
-                   . {{item.text}}
+                   . {{t(item.text)}}
 
 
                 <div class="details text-sm" v-if="item.details.length">
-                    <div v-for="detail in item.details"  :key="detail.detailsId">{{detail.detailsText}}</div>
+                    <div v-for="detail in item.details"  :key="detail.detailsId">{{t(detail.detailsText)}}</div>
                 </div>
                 </div>
             </div>
@@ -24,18 +24,20 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+ const {t} = useI18n({useScope:'global'});
 let amenities = [
-    {id:1,text:'Տեղակայված է արդեն բնակեցված համայնքում',details:[]},
-    {id:2,text:'Անմիջապես կողքը չկան ԵՎ չեն լինելու այլ շինարարություններ',details:[]},
-    {id:3,text:'Ընդարձակ և սրտաբաց ընդունարան',details:[]},
-    {id:4,text:'Բնակիչների կյանքը հեշտացնող ծառայություններ',details:[{detailsId:1,detailsText:'- աղբահանություն ամեն հարկից'},{detailsId:2,detailsText:'- լվաքատան ծառայություն'},{detailsId:3,detailsText:'- բանալի թողնելու, տաքսի և այլ ծառայությունների պատվիրելու հնարավորություն'}]},
-    {id:5,text:'ԱՆվտանգություն',details:[]},
-    {id:6,text:'Բարձրակարգ վերելակներ',details:[]},
-    {id:7,text:'Անմիջապես շենքի տակը գործող  սուպերմարկետ,արագ սննդի կետ',details:[]},
-    {id:8,text:'Մոտակայքում մանկապարտեզներ, դպրոցներ, Մարզասրահներ',details:[]},
-    {id:9,text:'Օգտագործված են բարձրակարգ նյութեր',details:[]},
-    {id:10,text:'9 բալ սեյսմակայունություն',details:[]},
-    {id:11,text:'Մեծ ընդարձակ բակ',details:[]},
+    {id:1,text:'BuildingAmenities.firstLine',details:[]},
+    {id:2,text:'BuildingAmenities.secondLine',details:[]},
+    {id:3,text:'BuildingAmenities.thirdԼine',details:[]},
+    {id:4,text:'BuildingAmenities.fourthLine.title',details:[{detailsId:1,detailsText:'BuildingAmenities.fourthLine.line1'},{detailsId:2,detailsText:'BuildingAmenities.fourthLine.line2'},{detailsId:3,detailsText:'BuildingAmenities.fourthLine.line3'}]},
+    {id:5,text:'BuildingAmenities.fifthLine',details:[]},
+    {id:6,text:'BuildingAmenities.sixthLine',details:[]},
+    {id:7,text:'BuildingAmenities.seventhLine',details:[]},
+    {id:8,text:'BuildingAmenities.eighthLine',details:[]},
+    {id:9,text:'BuildingAmenities.ninthLine',details:[]},
+    {id:10,text:'BuildingAmenities.tenth',details:[]},
+    {id:11,text:'BuildingAmenities.eleventhLine',details:[]},
 ]
 
 </script>

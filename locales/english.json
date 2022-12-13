@@ -1,4 +1,39 @@
 {
     "hello": "Hello",
-    "language": "language"
+    "language": "language",
+    "menu-item1":"Building structure",
+    "menu-item2":"Building amenities",
+    "menu-item3":"Packages",
+    "menu-item4":"Floor plans",
+    "menu-item5":"Contact",
+    "chenge-Language":"chenge language",
+    "residential-building":"residential building",
+    "video-tour":"video tour",
+    "BuildingStructure":{
+      "Building-structure":"Building structure",
+      "Entrance-hall":"Entrance hall",
+      "Corridor": "Corridor",
+      "GardenAndPlayground": "Garden And Playground",
+      "parking":"parking"
+    },
+    "BuildingAmenities":{
+      "Building-amenities":"Building Amenities",
+      "firstLine":"Located already in a populated community",
+      "secondLine":"There will not be no side and no other constructions",
+      "thirdԼine":"Spacious and heartbreaking reception",
+      "fourthLine":{
+        "title":"Service of residents' life",
+        "line1":"- Garbage collection from each floor",
+        "line2":"-Laundry service",
+        "line3":"-Possibility to leave a key to taxi and other services"
+      },
+      "fifthLine":" security",
+      "sixthLine":"High quality elevators",
+      "seventhLine":" Immediately Building Supermarket, Fast Food Point",
+      "eighthLine":"Kindergartens, schools, gyms nearby",
+      "ninthLine":"Are used in high-quality materials",
+      "tenth":"9 Bal seismic resistance",
+      "eleventhLine":"Great spacious yard"
+
+    }
   }

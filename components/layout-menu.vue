@@ -1,13 +1,13 @@
 <template>
     <div class="menu-main py-[40px] px-[80px] lg:pt-[40px] lg:pr-[200px] lg:pb-[60px] lg:pl-[200px] flex justify-between items-center">
-        <div>{{t('hello')}}</div>
+        
         <div class="logo  w-[92px] h-[81px]"></div>
         <div class="navbar hidden  lg:block">
             <ul class="flex  ">
                 <li v-for="item in menuItems" :key="item.id"
                 class="text-[16px] cursor-pointer leading-5 ml-[48px]"
                 @click="scrollToId(item.pathId)"
-                >{{item.title}}</li>
+                >{{t(item.title)}}</li>
             </ul>
            
         </div>
@@ -20,7 +20,7 @@
                 <li  v-for="item in menuItems" :key="item.id"
                 class="text-[16px]   cursor-pointer leading-[20px] mt-[40px] ml-[48px]"
                 @click="scrollToId(item.pathId)"
-                >{{item.title}}</li>
+                >{{t(item.title)}}</li>
             </ul>
             </div>
             </div>
@@ -34,11 +34,11 @@
     const {t} = useI18n({useScope:'global'});
     let dialog = ref(false)
     let menuItems =[
-        {id:1,title:'Շենքի կառուցվածքը',pathId:'BuildingStructure'},
-        {id:2,title:'Շենքի հարմարությունները',pathId:'buildingAmenities'},
-        {id:3,title:'Փաթեթեներ',pathId:'packages'},
-        {id:4,title:'Հատակագծեր',pathId:'fllorePlans'},
-        {id:5,title:'Կապ',pathId:'fotter-component'}
+        {id:1,title:'menu-item1',pathId:'BuildingStructure'},
+        {id:2,title:'menu-item2',pathId:'buildingAmenities'},
+        {id:3,title:'menu-item3',pathId:'packages'},
+        {id:4,title:'menu-item4',pathId:'fllorePlans'},
+        {id:5,title:'menu-item5',pathId:'fotter-component'}
     ]
     function chengeDialog () {
         dialog.value = true

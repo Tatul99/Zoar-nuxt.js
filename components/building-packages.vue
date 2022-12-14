@@ -1,7 +1,7 @@
 <template>
     <div id="packages" class="packages-main pt-[100px] flex flex-col items-center ">
-        <div class="packages-title text-blue text-[24px] md:text-[40px] font-bold leading-[49px] mb-[40px]">ՓԱԹԵԹՆԵՐ</div>
-        <div class="under-title text-blue text-center text-[16px] mb-[80px]">Ստորև կարող եք ընտրել ներքին հարդարման Ձեզ առավել հարմար փաթեթը։</div>
+        <div class="packages-title text-blue text-[24px] md:text-[40px] font-bold leading-[49px] mb-[40px]">{{$t('PACKAGES.Packages')}}</div>
+        <div class="under-title text-blue text-center text-[16px] mb-[80px]">{{$t('PACKAGES.subTitle')}}</div>
         <div class="packages-contain p-[24px] md:pl-[100px] lg:pl-[250px] md:pr-[100px] lg:pr-[200px] w-[100%] ">
                 <div class=" flex justify-between cursor-pointer flex-wrap w-[100%] ">
                     <div class="item hover-plus w-full md:w-[50%]  relative flex flex-col items-center p-[20px] lg:p-[64px] mb-[40px]" v-for="(item,i) in packageItems" :key="item.id"
@@ -15,8 +15,8 @@
                            
                         }"
                     >
-                        <div class="item-title flex justify-center leading-[39px] text-blue text-[32px] relative">{{item.title}}</div>
-                        <ul class="text-blue mt-[50px] flex flex-col"><li v-for="list in item.text" :key="list" class="text-center leading-[30px]">{{list}}</li></ul>
+                        <div class="item-title flex justify-center leading-[39px] text-blue text-[32px] relative">{{$t(item.title)}}</div>
+                        <ul class="text-blue mt-[50px] flex flex-col"><li v-for="list in item.text" :key="list" class="text-center leading-[30px]">{{$t(list)}}</li></ul>
                     </div>
                 </div>
         </div>
@@ -24,11 +24,13 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+ const {t} = useI18n({useScope:'global'});
 let packageItems = [
-    {id:1,title:'Ստանդարտ',text:['Մուտքի դուռ','Գաջած պատեր','Հոսնքի լարանցում','Դրսի պատուհաններ', 'Առաջնային ստյաժկա', 'Մուտքային ջրագծերի  հիմնական կետեր', 'Կոյուղու հիմնական կետեր']},
-    {id:2,title:'Կոմֆորտ',text:['Քիվեր Վերանորոգում', 'Պատուհանագոգ',' Ներկած   պատեր', 'Հոսանքի միացման վերջնական մոնտաժ առանց անջատիչների', 'Սանհանգույցի սալիկապատում', 'Լամինատե և պռեսգրանիտե հատակ', ' Առաստաղի գիպսակարտոն և ներկում']},
-    {id:3,title:'Կոմֆորտ  պլյուս', text:['Ջահը', 'Լույսերը', 'Ծորակները', 'Վարդակները', 'Վարագույրի կախիչները',' Խոհանոցի լամինատե կահույքը', 'Ավելանում է սանհանգույցի կահույքը']},
-    {id:4,title:'Լյուքս',text:['Վերոնշյալ տարբերակներից որևէ մեկին ավելանում է անհատական ինտերիեր դիզայն և դրա վերանորոգման աշխատանքները']}
+    {id:1,title:'PACKAGES.Standard.title',text:['PACKAGES.Standard.line1','PACKAGES.Standard.line2','PACKAGES.Standard.line3','PACKAGES.Standard.line4', 'PACKAGES.Standard.line5', 'PACKAGES.Standard.line6', 'PACKAGES.Standard.line7']},
+    {id:2,title:'PACKAGES.Comfort.title',text:['PACKAGES.Comfort.line1', 'PACKAGES.Comfort.line2','PACKAGES.Comfort.line3', 'PACKAGES.Comfort.line4', 'PACKAGES.Comfort.line5', 'PACKAGES.Comfort.line6', 'PACKAGES.Comfort.line7']},
+    {id:3,title:'PACKAGES.ComfortPlus.title', text:['PACKAGES.ComfortPlus.line1', 'PACKAGES.ComfortPlus.line2', 'PACKAGES.ComfortPlus.line3', 'PACKAGES.ComfortPlus.line4', 'PACKAGES.ComfortPlus.line5','PACKAGES.ComfortPlus.line6', 'PACKAGES.ComfortPlus.line7']},
+    {id:4,title:'PACKAGES.Lux.title',text:['PACKAGES.Lux.line1']}
 ]
 </script>
 

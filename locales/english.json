@@ -35,5 +35,52 @@
       "tenth":"9 Bal seismic resistance",
       "eleventhLine":"Great spacious yard"
 
+    },
+    "PACKAGES":{
+      "Packages":"Packages",
+      "subTitle":"Below you can choose the interior decoration package that suits you best.",
+      "Standard":{
+        "title":"Standard",
+        "line1":"Entrance door",
+        "line2":"Cracked walls",
+        "line3":"Current voltage",
+        "line4":"Exterior windows",
+        "line5":"Primary striazhka",
+        "line6":"Main points of incoming water lines",
+        "line7":"Main points of the sewer"
+      },
+      "Comfort":{
+        "title":"Comfort",
+        "line1":"Eaves Repair",
+        "line2":"Windowsill",
+        "line3":" Painted walls",
+        "line4":"Final assembly of power connection without switches",
+        "line5":"Bathroom tiling",
+        "line6":"Laminate and presgranite flooring",
+        "line7":"Ceiling plasterboard and painting"
+      },
+      "ComfortPlus":{
+        "title":"Comfort Plus",
+        "line1":"The torch",
+        "line2":"The lights",
+        "line3":" Faucets",
+        "line4":"The nozzles",
+        "line5":"Curtain hangers",
+        "line6":"Laminate kitchen furniture",
+        "line7":"Bathroom furniture is added"
+      },
+      "Lux":{
+        "title":"Lux",
+        "line1":"Individual interior design and its repair works are added to any of the above options"
+       
+      }
+    },
+    "SPECIALS":{
+      "specials":"SPECIALS",
+      "subTitle":"In this section, you can familiarize yourself with the floor plans of the apartments available in the building and choose the most suitable option for you.",
+      "plansText":{
+        "text1":"SURFACE OF THE APARTMENT - 68.9 m2",
+        "text2":"NUMBER OF ROOMS - 2"
+      }
     }
   }

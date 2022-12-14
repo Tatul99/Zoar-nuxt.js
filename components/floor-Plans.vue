@@ -1,7 +1,7 @@
 <template>
     <div id="fllorePlans" class="plans-main  relative flex flex-col items-center mt-[40px]">
-            <div class="plans-title text-blue text-[24px] font-bold md:text-[40px] uppercase" >Հատակագծեր</div>
-            <div class="plans-text  text-center text-blue mb-[200px]">Այս բաժնում կարող եք ծանոթանալ շենքում հասանելի բնակարանների հատակագծերինև ընտրել ձեզ առավել հարմար տարբերակը։</div>
+            <div class="plans-title text-blue text-[24px] font-bold md:text-[40px] uppercase" >{{$t('SPECIALS.specials')}}</div>
+            <div class="plans-text  text-center text-blue mb-[200px]">{{$t('SPECIALS.subTitle')}}</div>
             <div class="carousel    ">
               <div class="corusel-contain max-h-[680px] lg:max-h-[870px] mb-[200px] p-[24px] md:p-[56px] bg-white shadow-lg flex justify-between  z-10 shadow-gray">
                 <div class="for-image flex-col md:flex-row flex justify-between">
@@ -24,8 +24,8 @@
                    </div>
                    <div class="ml-[20px] lg:ml-0 carousel0image-text">
                        <ol start="1"  class="uppercase text-[12px] md:text-[16px] text-blue">
-                           <li>բնակարանի մակերեսը - 68.9մ2</li>
-                           <li>Սենյակների քանակը - 2</li>
+                           <li>{{$t('SPECIALS.plansText.text1')}}</li>
+                           <li>{{$t('SPECIALS.plansText.text2')}}</li>
                        </ol>
                    </div>
                     </div>
@@ -38,6 +38,8 @@
 
 <script setup>
 import {ref} from 'vue'
+import { useI18n } from 'vue-i18n';
+const {t} = useI18n({useScope:'global'});
 let carouselImages = ['carousel-image-1.png','carousel-image-2.png','carousel-image-3.png','carousel-image-1.png','carousel-image-2.png','carousel-image-3.png','carousel-image-1.png','carousel-image-2.png']
 let imageUrl = ref(carouselImages[0])
 let activeClass = ref(0)
